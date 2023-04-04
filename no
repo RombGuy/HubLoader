@@ -1,0 +1,74 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+
+
+
+
+
+
+
+Rayfield:LoadConfiguration()
+
+
+local Window = Rayfield:CreateWindow({
+    Name = "Vex Hub",
+    LoadingTitle = "Vex Hub Loading",
+    LoadingSubtitle = "by RombHWH",
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "Vex Hub"
+    },
+    Discord = {
+       Enabled = true,
+       Invite = "qTReXd9bts", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = ture, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Vex Hub",
+       Subtitle = "Key System",
+       Note = "Join the discord (discord.gg/qTReXd9bts)",
+       FileName = "Vex Hub",
+       SaveKey = true,
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = "newscript"
+    }
+ })
+
+ local Tab = Window:CreateTab("Main", 11914981751) -- Title, Image
+
+ local Section = Tab:CreateSection("Speed Changer")
+ local Slider = Tab:CreateSlider({
+    Name = "Speed Changer",
+    Range = {16, 300},
+    Increment = 10,
+    Suffix = "Speed",
+    CurrentValue = 16,
+    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(s)
+    -- The function that takes place when the slider changes
+    -- The variable (Value) is a number which correlates to the value the slider is currently at
+    game.Players.LocalPlayer.Character.Humaniod.WalkSpeed = s
+    
+    end,
+ })
+
+ local Section = Tab:CreateSection("Speed Changer")
+ local Slider = Tab:CreateSlider({
+    Name = "Jump Power Changer",
+    Range = {50, 350},
+    Increment = 10,
+    Suffix = "Jump Power",
+    CurrentValue = 16,
+    Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(j)
+    -- The function that takes place when the slider changes
+    -- The variable (Value) is a number which correlates to the value the slider is currently at
+    game.Players.LocalPlayer.Character.Humaniod.JumpPower = j
+    
+    end,
+ })
+
+
+
