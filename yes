@@ -44,7 +44,7 @@ TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 20.000
 TextButton.TextWrapped = true
 TextButton.MouseButtonlDown: connect (function()
-	loadstring("https://raw.githubusercontent.com/RombGuy/GpuSaved/main/Main")
+	loadstring("https://raw.githubusercontent.com/RombGuy/GpuSaved/main/Main")()
 end)
 
 TextLabel_2.Parent = Frame
@@ -81,7 +81,7 @@ TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.TextSize = 20.000
 TextButton_2.TextWrapped = true
 TextButton_2.MouseButtonlDown: connect (function()
-	loadstring("https://raw.githubusercontent.com/RombGuy/GpuSaved/main/Main")
+	loadstring("https://raw.githubusercontent.com/RombGuy/GpuSaved/main/Main")()
 end)
 
 TextLabel_4.Parent = Frame
